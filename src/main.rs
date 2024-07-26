@@ -163,9 +163,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     let gov_info: Information = serde_json::from_str(GOV_FILE)?;
     let fuckboy_info: Information = serde_json::from_str(FUCKBOY_FILE)?;
 
-    println!("{:#?}", gov_info);
-    println!("{:#?}", fuckboy_info);
-
     println!(
         "{:#?}",
         fuckboy_info.is_accurate_with_sources(vec![gov_info])?
