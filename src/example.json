@@ -1,0 +1,12 @@
+{
+    "website_name": "gov.com.au",
+    "is_trusted": true,
+    "website_topics": ["covid", "vaccine"],
+    "statistics": [
+        {
+            "sources": [],
+            "description": "The rate of vaccinated people who survive covid",
+            "value": 95
+        }
+    ]
+}
