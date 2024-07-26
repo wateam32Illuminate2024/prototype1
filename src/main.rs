@@ -1,7 +1,10 @@
 use serde::{Deserialize, Serialize};
 use std::error::Error;
 
-pub trait Checkable where Self: Sized {
+pub trait Checkable
+where
+    Self: Sized,
+{
     fn is_accurate(&self) -> bool;
     fn is_accurate_with_sources(&self, trusted: Vec<Self>) -> Result<bool, String>;
     fn accuracy_score(&self) -> u32;
