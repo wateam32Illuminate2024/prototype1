@@ -5,7 +5,7 @@
     "statistics": [
         {
             "sources": [],
-            "description": "The rate of vaccinated people who survive covid",
+            "description": "The rate of vaccinated people who survive covid.",
             "value": 95
         }
     ]

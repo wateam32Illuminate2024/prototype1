@@ -157,16 +157,28 @@ impl Checkable for Information {
 }
 
 const GOV_FILE: &'static str = include_str!("example.json");
-const FUCKBOY_FILE: &'static str = include_str!("fuckboy.json");
+const FALSE_WEBSITEFILE: &'static str = include_str!("falsewebsite.json");
+const FB_POST_FILE: &'static str = include_str!("facebookpost.json");
 
 fn main() -> Result<(), Box<dyn Error>> {
     let gov_info: Information = serde_json::from_str(GOV_FILE)?;
-    let fuckboy_info: Information = serde_json::from_str(FUCKBOY_FILE)?;
+    let falsewebsite_info: Information = serde_json::from_str(FALSE_WEBSITEFILE)?;
+    let facebook_info: Information = serde_json::from_str(FB_POST_FILE)?;
 
-    println!(
-        "{:#?}",
-        fuckboy_info.is_accurate_with_sources(vec![gov_info])?
-    );
+    if falsewebsite_info.is_accurate_with_sources(vec![gov_info.clone()])? {
+        println!("The website {} is accurate", falsewebsite_info.website_name);
+    } else {
+        println!(
+            "The website {} is not accurate",
+            falsewebsite_info.website_name
+        );
+    }
+
+    if facebook_info.is_accurate_with_sources(vec![gov_info.clone()])? {
+        println!("The website {} is accurate\n", facebook_info.website_name);
+    } else {
+        println!("The website {} is not accurate", facebook_info.website_name);
+    }
 
     Ok(())
 }
