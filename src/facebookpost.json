@@ -1,0 +1,12 @@
+{
+    "website_name": "facebook.com/person/post",
+    "is_trusted": true,
+    "website_topics": ["covid", "vaccine"],
+    "statistics": [
+        {
+            "sources": [],
+            "description": "Survival rate of vaccinated people who get covid.",
+            "value": 95
+        }
+    ]
+}

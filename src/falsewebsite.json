@@ -1,0 +1,12 @@
+{
+    "website_name": "falsecovidinfo.com.au",
+    "is_trusted": false,
+    "website_topics": ["covid", "vaccine"],
+    "statistics": [
+        {
+            "sources": [],
+            "description": "The rate of vaccinated people who survive covid.",
+            "value": 5
+        }
+    ]
+}
